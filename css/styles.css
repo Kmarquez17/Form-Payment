@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    font-family: Lato;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin: 0;
+}
+
+
+/* gloobal */
+
+:root {
+    --deep-blue: #003476;
+    --primay: #1f324a;
+    --secondary: #3e90ff;
+    --gray1: #e1ecfc;
+    --gray2: #3b4d64;
+}
+
+.fomrContainerPayment {
+    display: block;
+    max-width: 1280px;
+    margin: 20px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.w-title-p {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.w-title-s {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primay);
+    margin-bottom: 10px;
+}
+
+.w-description {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--primay);
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 2.12222px 21.2222px rgba(0, 52, 118, 0.08);
+}
+
+.client-info {
+    /* width: 280px; */
+    height: 103px;
+    padding: 17px 0 17px 20px;
+    margin-bottom: 25px;
+}
+
+.client-info p:nth-child(4) {
+    margin: 0;
+}
+
+.c-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.c-wrapper .c-name {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primay);
+    margin-left: 7px;
+}
+
+.c-contact:first-child {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--primay);
+    line-height: 16.8px;
+}
+
+.c-contact {
+    margin-bottom: 5px;
+}
+
+.c-contact .number {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primay);
+    margin-top: 5px;
+}
+
+.c-wrapper .c-email {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primay);
+    margin-right: 7px;
+}
+
+.c-wrapper .c-is-email {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--primay);
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.c-wrapper .check {
+    margin: 0;
+}
+
+.c-yes {
+    margin-left: 10px;
+}
+
+.container-payments {
+    display: grid;
+    grid-template-columns: 320px;
+}
+
+.payment-amount {
+    position: relative;
+    height: 420px;
+    background-image: url("../image/backgroundPayment.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 115%;
+    margin-bottom: 25px;
+}
+
+.p-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.p-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+
+.p-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-amount p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primay);
+    margin-bottom: 9px;
+}
+
+.p-amount h2 {
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--secondary);
+    margin-bottom: 9px;
+}
+
+.p-amount .barra {
+    width: 210px;
+    border-bottom: 1px solid var(--secondary);
+    margin-bottom: 15px;
+}
+
+.macro-condo-info {
+    height: 135px;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+}
+
+.m-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 16px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.container-condo {
+    margin-left: 36px;
+}
+
+.condo-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.condo-info p:nth-child(1),
+.condo-info p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.condo-info .info {
+    font-weight: 700;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.form-credit-payment {
+    height: 381px;
+    padding: 17px 20px 22px 20px;
+}
+
+.f-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primay);
+    margin-left: 11px;
+}
+
+.formInput {
+    color: var(--gray2);
+    border: none;
+    font-weight: 400;
+    border-bottom: 1px solid var(--gray1);
+    box-shadow: none;
+    font-size: 14px;
+    padding-bottom: 7px;
+}
+
+.formInput::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.credit-card {
+    background-image: url("../image/creditcardbackground.svg");
+    position: relative;
+    left: -13px;
+    height: 175px;
+    background-repeat: no-repeat;
+    background-size: 106% 190px;
+    margin-bottom: 15px;
+}
+
+.data-group-card {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+
+.data-group-card .flexLabel:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+.data-group-card .flexLabel:nth-child(2) {
+    margin-bottom: 7px;
+}
+
+.flexLabel {
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle-card {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 12px;
+    color: #f7f9fc;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.data-card {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #ffffff;
+    /* color: transparent; */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.type-card-img {
+    width: 40px;
+    height: 31px;
+    position: absolute;
+    top: 32px;
+    right: 15px;
+    user-select: none;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}

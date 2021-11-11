@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pago de reserva</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css" />
+</head>
+
+<body>
+    <div class="fomrContainerPayment">
+        <div class="welcome">
+            <h1 class="w-title-p">Realizar reserva de un inmueble</h1>
+            <h1 class="w-title-s">¡Un gusto saludarte, Carolina!</h1>
+            <p class="w-description">A continuación, podrás realizar el pago para garantizar la reserva de tu nuevo hogar.
+            </p>
+        </div>
+        <div class="client-info card">
+            <p class="c-wrapper">
+                <img src=" ./image/contact.svg " alt="contact ">
+                <span class=" c-name ">Carolina Ramírez Fernández</span>
+            </p>
+            <p class=" c-contact ">
+                <span>Contacto</span>
+                <span class=" number ">8788-5432</span>
+            </p>
+            <p class=" c-wrapper ">
+                <span class=" c-email ">scampos@gmail.com</span>
+                <img src=" ./image/pincelEmail.svg " alt="pincelEmail ">
+            </p>
+            <p class=" c-wrapper ">
+                <span class="c-is-email ">¿Es este su correo?</span>
+                <span class=" c-wrapper check ">
+                    <img src="./image/check.svg " alt="check ">
+                    <span class="c-is-email c-yes ">Si</span>
+                </span>
+            </p>
+        </div>
+        <div class="container-payments">
+            <div class="payment-amount card">
+                <div class="p-header">
+                    <p class="p-title">Pago de reserva:</p>
+                </div>
+                <div class="p-amount">
+                    <p>Monto</p>
+                    <h2>$1,500.00</h2>
+                    <p class="barra"></p>
+
+                </div>
+
+                <div class="macro-condo-info">
+                    <h1 class="m-title">Condominio Monte Alto</h1>
+                    <div class="container-condo">
+                        <div class="condo-info">
+                            <p class="c-wrapper">
+                                <img src=" ./image/quota.svg " alt="quota ">
+                                <span class="info">Cuota Nº 123.</span>
+                            </p>
+                            <p class="c-wrapper">
+                                <img src="./image/house.svg" alt="house ">
+                                <span class="info">Unidad A 1-1.</span>
+                            </p>
+                            <p class="c-wrapper">
+                                <img src="./image/parking.svg" alt="parking ">
+                                <span class="info">2 espacios de parqueo.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-credit-payment card">
+                <div class="f-header">
+                    <p class="c-wrapper">
+                        <img src="./image/credit-cardIcon.svg" alt="cardIcon ">
+                        <span class="f-title">Detalles de pago</span>
+                    </p>
+                </div>
+
+
+                <div class="credit-card">
+                    <div class="type-card-img">
+                        <img id="typeCardLabel" src="./image/masterCard.svg" />
+
+
+                    </div>
+                    <div class="data-group-card">
+                        <div class="flexLabel">
+                            <label id="nameCardLabel" class="tittle-card">Nombre</label>
+                            <label id="nameCardLabel2" class="data-card"> Kevin marquez</label>
+                        </div>
+                        <div class="flexLabel">
+                            <label id="numberCardLabel" class="tittle-card">Número de tarjeta</label>
+                            <label id="numberCardLabel2" class="data-card"> 1234 6798 0987 5432 </label>
+                        </div>
+                        <div style="display: flex">
+                            <div class="flexLabel">
+                                <label id="expirationCardLabel" class="tittle-card">Expiración</label>
+                                <label id="expirationCardLabel2" class="data-card">
+                                    10/2021
+                                </label>
+                            </div>
+                            <div class="flexLabel" style="margin-left: 76px">
+                                <label id="cvvCardLabel" class="tittle-card">CVV</label>
+                                <label id="cvvCardLabel2" class="data-card">125 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="">
+                    <input type="text" class="formInput" placeholder="Nombre en la tarjeta" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
