@@ -3,6 +3,7 @@ body {
     padding: 0;
     background: #f7f9fc;
     font-family: Lato;
+    /* width: 500%; */
 }
 
 h1,
@@ -123,7 +124,7 @@ span {
     opacity: 0.5;
 }
 
-.c-wrapper .check {
+.c-wrapper .checkYes {
     margin: 0;
 }
 
@@ -232,7 +233,7 @@ span {
 }
 
 .form-credit-payment {
-    height: 381px;
+    /* height: 381px; */
     padding: 17px 20px 22px 20px;
 }
 
@@ -243,35 +244,28 @@ span {
     margin-left: 11px;
 }
 
-.formInput {
-    color: var(--gray2);
-    border: none;
-    font-weight: 400;
-    border-bottom: 1px solid var(--gray1);
-    box-shadow: none;
-    font-size: 14px;
-    padding-bottom: 7px;
+.f-header {
+    margin-bottom: 10px;
 }
 
-.formInput::placeholder {
-    font-weight: 400;
-    font-size: 14px;
+.flexLabel {
+    display: flex;
+    flex-direction: column;
 }
 
 .credit-card {
     background-image: url("../image/creditcardbackground.svg");
     position: relative;
-    left: -13px;
     height: 175px;
     background-repeat: no-repeat;
-    background-size: 106% 190px;
+    background-size: 100% 175px;
     margin-bottom: 15px;
 }
 
 .data-group-card {
     position: absolute;
-    top: 60px;
-    left: 40px;
+    top: 42px;
+    left: 12px;
 }
 
 .data-group-card .flexLabel:nth-child(1) {
@@ -280,11 +274,6 @@ span {
 
 .data-group-card .flexLabel:nth-child(2) {
     margin-bottom: 7px;
-}
-
-.flexLabel {
-    display: flex;
-    flex-direction: column;
 }
 
 .tittle-card {
@@ -319,9 +308,141 @@ span {
     width: 40px;
     height: 31px;
     position: absolute;
-    top: 32px;
+    top: 12px;
     right: 15px;
     user-select: none;
+}
+
+.validateCard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.inputContainer>img {
+    position: absolute;
+}
+
+.validateCard .inputContainer:nth-child(2) img {
+    right: 0;
+}
+
+.formInput {
+    width: 100%;
+    color: var(--primay);
+    border: none;
+    font-weight: 400;
+    border-bottom: 1px solid var(--gray1);
+    box-shadow: none;
+    font-size: 14px;
+    padding-bottom: 7px;
+}
+
+.numberCredit {
+    padding-left: 35px;
+}
+
+.dateCredit {
+    width: 113px;
+    padding-left: 27px;
+}
+
+.cvvCredit {
+    width: 113px;
+}
+
+.term {
+    display: flex;
+    align-items: flex-end;
+}
+
+.term:nth-child(1) {
+    margin-bottom: 12px;
+}
+
+.term:nth-child(2) {
+    align-items: flex-start;
+}
+
+.term p {
+    width: 200px;
+    margin: 0;
+    color: var(--primay);
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.term p span {
+    text-decoration: underline;
+}
+
+.checkbox {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 5px;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: #ffffff;
+    border: 2px solid var(--primay);
+    border-radius: 5px;
+}
+
+.checkbox:hover input~.check {
+    border: 2px solid var(--primay);
+}
+
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked~.check:after {
+    display: block;
+}
+
+.checkbox .check:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: solid var(--primay);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.formInput::placeholder {
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .fs-12 {

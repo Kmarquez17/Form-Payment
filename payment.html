@@ -21,7 +21,7 @@
         <div class="client-info card">
             <p class="c-wrapper">
                 <img src=" ./image/contact.svg " alt="contact ">
-                <span class=" c-name ">Carolina Ramírez Fernández</span>
+                <span class="c-name ">Carolina Ramírez Fernández</span>
             </p>
             <p class=" c-contact ">
                 <span>Contacto</span>
@@ -31,16 +31,16 @@
                 <span class=" c-email ">scampos@gmail.com</span>
                 <img src=" ./image/pincelEmail.svg " alt="pincelEmail ">
             </p>
-            <p class=" c-wrapper ">
+            <p class=" c-wrapper">
                 <span class="c-is-email ">¿Es este su correo?</span>
-                <span class=" c-wrapper check ">
-                    <img src="./image/check.svg " alt="check ">
-                    <span class="c-is-email c-yes ">Si</span>
+                <span class=" c-wrapper checkYes ">
+                    <img src="./image/check.svg" alt="checkYes">
+                    <span class="c-is-email c-yes">Si</span>
                 </span>
             </p>
         </div>
         <div class="container-payments">
-            <div class="payment-amount card">
+            <div class="payment-amount card ">
                 <div class="p-header">
                     <p class="p-title">Pago de reserva:</p>
                 </div>
@@ -56,15 +56,15 @@
                     <div class="container-condo">
                         <div class="condo-info">
                             <p class="c-wrapper">
-                                <img src=" ./image/quota.svg " alt="quota ">
+                                <img src=" ./image/quota.svg " alt="quota " width="16" height="13">
                                 <span class="info">Cuota Nº 123.</span>
                             </p>
                             <p class="c-wrapper">
-                                <img src="./image/house.svg" alt="house ">
+                                <img src="./image/house.svg" alt="house " width="16" height="13">
                                 <span class="info">Unidad A 1-1.</span>
                             </p>
                             <p class="c-wrapper">
-                                <img src="./image/parking.svg" alt="parking ">
+                                <img src="./image/parking.svg" alt="parking " width="16" height="13">
                                 <span class="info">2 espacios de parqueo.</span>
                             </p>
                         </div>
@@ -83,8 +83,6 @@
                 <div class="credit-card">
                     <div class="type-card-img">
                         <img id="typeCardLabel" src="./image/masterCard.svg" />
-
-
                     </div>
                     <div class="data-group-card">
                         <div class="flexLabel">
@@ -99,7 +97,7 @@
                             <div class="flexLabel">
                                 <label id="expirationCardLabel" class="tittle-card">Expiración</label>
                                 <label id="expirationCardLabel2" class="data-card">
-                                    10/2021
+                                    10/21
                                 </label>
                             </div>
                             <div class="flexLabel" style="margin-left: 76px">
@@ -111,7 +109,45 @@
                 </div>
 
                 <form action="">
-                    <input type="text" class="formInput" placeholder="Nombre en la tarjeta" />
+                    <div class="inputContainer">
+                        <input type="text" class="formInput nameCredit" placeholder="Nombre en la tarjeta" />
+                    </div>
+                    <div class="inputContainer">
+                        <img src="./image/numberCredit.svg" alt="formatMarcaCard">
+                        <input type="number" class="formInput numberCredit" placeholder="Número de tarjeta" />
+                    </div>
+                    <div class="validateCard">
+                        <div class="inputContainer">
+                            <img src="./image/dateCredit.svg" alt="dateCredit">
+                            <input type="text" class="formInput dateCredit" placeholder="mm/aa" />
+                        </div>
+
+                        <div class="inputContainer">
+                            <img src="./image/infoCredit.svg" alt="infoCredit">
+                            <input type="number" class="formInput cvvCredit" placeholder="CCV" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class='term'>
+                            <label class="checkbox">
+                                <input checked="true" type="checkbox" id="validCheck" />
+                                <span class="check"></span>
+                            </label>
+                            <div style="display: flex; justify-content: space-between; width: 100%;">
+                                <p>Deseo guardar los datos de mi tarjeta.</p>
+                                <img src="./image/infoCardSave.svg" alt="infoCardSave.svg">
+                            </div>
+                        </div>
+
+                        <div class='term'>
+                            <label class="checkbox">
+                                <input checked="true" type="checkbox" id="validCheck2" />
+                                <span class="check"></span>
+                            </label>
+                            <p>He leído y acepto los <span>Términos y Condiciones</span></p>
+                        </div>
+
+                    </div>
                 </form>
             </div>
         </div>
