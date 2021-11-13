@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: #f7f9fc;
     font-family: Lato;
-    /* width: 500%; */
+    height: 100vh;
 }
 
 h1,
@@ -17,6 +17,17 @@ span {
     margin: 0;
 }
 
+.type-card-img-input {
+    margin-left: -18%;
+    width: 13%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 
 /* gloobal */
 
@@ -24,6 +35,7 @@ span {
     --deep-blue: #003476;
     --primay: #1f324a;
     --secondary: #3e90ff;
+    --lightBlue: #4989de;
     --gray1: #e1ecfc;
     --gray2: #3b4d64;
 }
@@ -134,7 +146,7 @@ span {
 
 .container-payments {
     display: grid;
-    grid-template-columns: 320px;
+    /* grid-template-columns: 280px; */
 }
 
 .payment-amount {
@@ -143,8 +155,9 @@ span {
     background-image: url("../image/backgroundPayment.svg");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 115%;
+    background-size: 125%;
     margin-bottom: 25px;
+    background-position-y: 107%;
 }
 
 .p-header {
@@ -256,9 +269,8 @@ span {
 .credit-card {
     background-image: url("../image/creditcardbackground.svg");
     position: relative;
-    height: 175px;
+    height: 153px;
     background-repeat: no-repeat;
-    background-size: 100% 175px;
     margin-bottom: 15px;
 }
 
@@ -280,7 +292,8 @@ span {
     font-weight: 400;
     font-size: 9px;
     line-height: 12px;
-    color: #f7f9fc;
+    /* color: #f7f9fc; */
+    color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -342,6 +355,17 @@ span {
     box-shadow: none;
     font-size: 14px;
     padding-bottom: 7px;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.formInput::-webkit-outer-spin-button,
+.formInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.formInput:focus {
+    border-bottom: 1px solid var(--gray1);
 }
 
 .numberCredit {
@@ -349,12 +373,12 @@ span {
 }
 
 .dateCredit {
-    width: 113px;
+    width: 84px;
     padding-left: 27px;
 }
 
 .cvvCredit {
-    width: 113px;
+    width: 108px;
 }
 
 .term {
@@ -445,6 +469,36 @@ span {
     font-size: 14px;
 }
 
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 120px;
+}
+
+.btn {
+    width: 180px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-primary {
+    border: none;
+    background-color: var(--lightBlue);
+    color: #ffffff;
+    border-radius: 23px;
+}
+
+.btn-secondary {
+    background-color: #f7f9fc;
+    color: var(--secondary);
+}
+
 .fs-12 {
     font-size: 12px;
 }
@@ -459,4 +513,127 @@ span {
 
 .fs-36 {
     font-size: 36px;
+}
+
+@media screen and (max-width: 320px) {
+    .container-payments {
+        grid-template-columns: 280px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .credit-card {
+        height: 186px;
+        background-size: 100% 186px;
+    }
+    .payment-amount {
+        background-size: 115%;
+        background-position-y: 110%;
+    }
+}
+
+@media (min-width: 411px) and (max-width: 767px) {
+    .credit-card {
+        height: 186px;
+        background-size: 87% 186px;
+    }
+    .type-card-img {
+        right: 60px;
+    }
+    .payment-amount {
+        background-size: 125%;
+        background-position-y: 205%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .fomrContainerPayment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    .client-info {
+        width: 648px;
+    }
+    .w-title-p {
+        font-size: 18px;
+    }
+    .w-title-s {
+        font-size: 24px;
+    }
+    .w-description {
+        font-size: 14px;
+    }
+    .client-info {
+        text-align: center;
+    }
+    .client-info p {
+        justify-content: center;
+    }
+    .payment-amount {
+        height: 453px;
+        margin-bottom: 0;
+    }
+    .container-payments {
+        grid-template-columns: 320px 320px;
+        column-gap: 15px;
+        justify-content: center;
+    }
+    .btn {
+        width: 316px;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {
+    .client-info {
+        width: 528px;
+        height: 133px;
+    }
+    .container-payments {
+        grid-template-columns: 527px 527px;
+        column-gap: 25px;
+    }
+    .w-title-p {
+        font-size: 32px;
+    }
+    .w-title-s {
+        font-size: 36px;
+    }
+    .w-description {
+        font-size: 18px;
+    }
+    .credit-card {
+        background-size: 46% 186px;
+    }
+    .payment-amount {
+        background-position-y: -1010%;
+    }
+    .c-wrapper .c-name,
+    .c-wrapper .c-email,
+    .c-contact .number {
+        font-size: 18px;
+    }
+    .c-contact:first-child {
+        font-size: 18px;
+    }
+    .c-wrapper .c-is-email {
+        font-size: 16px;
+    }
+    .p-amount h2 {
+        font-size: 48px;
+    }
+    .type-card-img {
+        top: 30px;
+        right: 273px;
+    }
+    .dateCredit {
+        width: 213px;
+    }
+    .cvvCredit {
+        width: 193px;
+    }
 }
