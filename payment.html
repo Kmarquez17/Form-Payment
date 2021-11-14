@@ -119,7 +119,7 @@
                     <div class="validateCard">
                         <div class="inputContainer">
                             <img src="./image/dateCredit.svg" alt="dateCredit">
-                            <input type="text" class="formInput dateCredit" placeholder="mm/aa" />
+                            <input id="dateCredit" type="text" class="formInput dateCredit" placeholder="mm/aa" type="text" onkeyup="handleExpirationCard(this);" placeholder="mm/aa" maxlength="5" />
                         </div>
 
                         <div class="inputContainer">
@@ -158,5 +158,78 @@
         </div>
     </div>
 </body>
+
+<script>
+    const handleExpirationCard = (ev) => {
+
+        const {
+            value
+        } = ev
+        const expirationCardLabelGroup = document.getElementById('expirationCardLabel');
+        const expirationCardLabel = document.getElementById('expirationCardLabel2');
+        let dateCredit = document.getElementById("dateCredit");
+        let date = new Date().getFullYear()
+        let monthAct = new Date().getMonth() + 1
+        let anioAct = date.toString().slice(2, 4)
+        let valorModif = value
+        let anio = valorModif.slice(3, 5)
+        let month = valorModif.slice(0, 2)
+            //let pleca = valorModif.search("/")
+
+        if (/[a-zA-Z]/g.test(value) == true) {
+            dateCredit.value = value.substring(0, value.length - 1)
+            return
+        }
+
+
+        //validamos el month
+        if (month.length === 2) {
+            if (Number(month) > 12 || Number(month) === 0) {
+                alert("El mes ingresado no es válido")
+                dateCredit.value = ""
+                return
+            }
+        }
+
+        if (value.length === 2) {
+            dateCredit.value = value + "/"
+        }
+
+
+        //Validamos el anio
+        if (anio.length === 2) {
+            if (Number(anio) < Number(anioAct)) {
+                alert("El año ingresado no es válido")
+                dateCredit.value = value.substring(0, 3);
+            }
+        }
+
+
+        // // console.log('pleca ', pleca);
+        // if (pleca !== -1 && pleca !== 2) {
+        //     //Se valida que la pleca no esta en el formato correcto
+        //     alert("El formato no es válido, favor verificar")
+        // }
+
+
+        //Se valida si la tarjeta es del mismo año y si pone un mes menor al actual    
+        if (value.length === 5) {
+            if (Number(anio) === Number(anioAct)) {
+                if (Number(month) < Number(monthAct)) {
+                    alert("El mes correspondiente a su tarjeta venció meses anteriores")
+
+                }
+            }
+        }
+
+
+
+        expirationCardLabelGroup.style.color = "#f7f9fc";
+        expirationCardLabel.innerText = value;
+        expirationCardLabel.style.color = "#FFFFFF";
+
+
+    }
+</script>
 
 </html>
