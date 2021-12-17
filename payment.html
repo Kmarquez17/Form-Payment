@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="fomrContainerPayment">
+    <div class="fomrContainerPayment" style="display: none;">
         <div class="welcome">
             <h1 class="w-title-p">Realizar reserva de un inmueble</h1>
             <h1 class="w-title-s">¡Un gusto saludarte, Carolina!</h1>
             <p class="w-description">A continuación, podrás realizar el pago para garantizar la reserva de tu nuevo hogar.
             </p>
         </div>
-        <div class="client-info card">
+        <div class="client-info card" style="display: none;">
             <p class="c-wrapper">
                 <img src=" ./image/contact.svg " alt="contact ">
                 <span class="c-name ">Carolina Ramírez Fernández</span>
@@ -39,7 +39,7 @@
                 </span>
             </p>
         </div>
-        <div class="container-payments">
+        <div class="container-payments" style="display: none;">
             <div class="payment-amount card ">
                 <div class="p-header">
                     <p class="p-title">Pago de reserva:</p>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-credit-payment card">
+            <div class="form-credit-payment card" style="display: none;">
                 <div class="f-header">
                     <p class="c-wrapper">
                         <img src="./image/credit-cardIcon.svg" alt="cardIcon ">
@@ -133,9 +133,22 @@
                                 <input checked="true" type="checkbox" id="validCheck" />
                                 <span class="check"></span>
                             </label>
-                            <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <div style="display: flex; justify-content: space-between; width: 100%; position: relative;">
                                 <p>Deseo guardar los datos de mi tarjeta.</p>
-                                <img src="./image/infoCardSave.svg" alt="infoCardSave.svg">
+
+
+
+                                <div class="tooltip">
+                                    <img src="./image/infoCardSave.svg" alt="infoCardSave.svg">
+                                    <div class="bottom">
+                                        <span>Al seleccionar esta opción se guardan los datos de la tarjeta para
+                                            facilitar futuros procesos.
+                                            <br><br> Los datos se utilizarán únicamente para los pagos que usted
+                                            autorice.</span>
+                                        <i></i>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -156,6 +169,57 @@
             <button class="btn btn-primary">Realizar pago</button>
             <button class="btn btn-secondary">Cancelar</button>
         </div>
+    </div>
+    <div id="sending-credentials" class="payment-successful" style="display: none;">
+        <div class="logo"><img src="./image/logo.svg" alt="Concasa"></div>
+        <div class="container-success-payments">
+            <img src="./image/payment-success.svg" alt="payment-success">
+            <h1 class="cs-title">¡Se ha realizado el pago exitosamente!</h1>
+            <p class="cs-subTitle">Se enviará el recibo a su correo electrónico junto con las indicaciones para continuar el proceso.</p>
+            <span class="cs-close">Puede cerrar esta página</span>
+            <img src="./image/house-payment.svg" alt="">
+        </div>
+
+    </div>
+
+    <div class="modalTerms">
+        <h1 class="modalTitle">Términos y condiciones</h1>
+        <div class="modalClose"><img src="./image/closeModal.svg" alt="close"></div>
+        <div class="informationTerms">
+            <p class="text">
+                Queda entendido que, de ser aprobada la presente compra por el propietario del inmueble, en las condiciones expuestas según establece en el anexo 1 correspondiente al plan de ventas adjunto a éste documento y que se considera parte integral del mismo,
+                se procederá al otorgamiento del documento de opción de compra con los datos que para tal efecto he suministrado al inicio de este documento, los cuales declaro como ciertos y válidos para la elaboración de dicho contrato.
+            </p>
+
+            <p class="text">
+                Igualmente queda entendido que los gastos de timbres, impuestos de traspaso, honorarios, tramitación y cualesquiera otros que se generen por el otorgamiento de la escritura de compraventa del inmueble(s), serán asumidos única y exclusivamente por el SOLICITANTE.
+            </p>
+
+            <p class="text">
+                En este acto entrego a
+                <span>PROMOTORA CONCASA, S.A.</span>la cantidad de
+                <span>15000</span> de como pago de reserva del inmueble. Dicha suma es en calidad de depósito formando parte integral del precio de compra y no serán reembolsables una vez transcurridos 30 días naturales a partir de esta fecha, en cuyo
+                caso quedará a favor de <span>PROMOTORA CONCASA, S.A.</span> para resarcir los daños causados por el incumplimiento aquí pautado y cuyos términos y condiciones fueron establecidos en el plan de compra aceptado. Si el retracto de la reserva
+                se realiza en el tiempo estipulado, el reembolso se hará efectivo en 30 días después de recibida la notificación por escrito.
+            </p>
+
+            <p class="text">
+                Se establece como plazo máximo para el otorgamiento del documento de opción de compra respectivo, el término de 30 días naturales, contados a partir de la firma de este documento. En caso de que por mi causa no pudiere concluirse este encargo, ya fuere
+                por no concurrir al acto de otorgamiento del documento de opción de compra, por no realizar oportunamente alguno de los pagos que fueran necesarios para ello o por cualquier otra causa imputable a mi persona, se entenderá que renuncio
+                automáticamente al encargo que he hecho por este documento y en consecuencia
+                <span>PROMOTORA CONCASA, S.A.</span>cédula jurídica 3-101-332655 quedará en plena libertad para aceptar de terceros el mismo encargo que yo he hecho.
+            </p>
+
+            <p class="text">
+                Conforme con las estipulaciones, acepto los términos y condiciones el día: dd/mm/aaaaa.
+            </p>
+        </div>
+        <div class="btnAccept">
+            <button>
+                Aceptar
+            </button>
+        </div>
+
     </div>
 </body>
 

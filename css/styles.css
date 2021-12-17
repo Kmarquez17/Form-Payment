@@ -515,6 +515,183 @@ span {
     font-size: 36px;
 }
 
+.container-success-payments {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cs-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--deep-blue);
+    text-align: center;
+}
+
+.cs-subTitle {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #000e46;
+    margin-bottom: 15px;
+}
+
+.cs-close {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--deep-blue);
+    opacity: 0.5;
+    margin-bottom: 30px;
+}
+
+.tooltip {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.tooltip .bottom {
+    display: none;
+    width: 240px;
+    padding: 10px 12px;
+    top: 18px;
+    right: -35px;
+    color: var(--primay);
+    background-color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); */
+    border: 1px solid #c4c4c4;
+}
+
+.tooltip:hover .bottom {
+    display: block;
+}
+
+.tooltip .bottom i {
+    position: absolute;
+    bottom: 97%;
+    right: 33px;
+    width: 19px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.tooltip .bottom i::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 20px;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+}
+
+body {
+    /* position: fixed; */
+    width: 100%;
+    /* height: 100%; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+/* Desde aqui */
+
+.modalTerms {
+    position: fixed;
+    width: 260px;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+
+.modalClose {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+}
+
+.modalClose img {
+    width: 16px;
+    height: 16px;
+}
+
+.modalTitle {
+    font-size: 18px;
+    color: #1f324a;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 27px;
+}
+
+
+/* .informationTerms {
+    overflow-y: auto;
+} */
+
+.informationTerms .text {
+    font-size: 15px;
+    color: #1f324a;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 21px;
+    text-align: justify;
+}
+
+.informationTerms .text span {
+    font-weight: 700;
+}
+
+.btnAccept {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btnAccept button {
+    width: 308px;
+    height: 38px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #3e90ff;
+    color: #fff;
+    border: 1px solid transparent;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+
+/* Hasta aqui */
+
 @media screen and (max-width: 320px) {
     .container-payments {
         grid-template-columns: 280px;
@@ -584,9 +761,44 @@ span {
     .btn {
         width: 316px;
     }
+    .container-success-payments {
+        width: 500px;
+    }
+    .cs-title {
+        font-size: 28px;
+    }
+    .cs-subTitle {
+        font-size: 22px;
+    }
+    .cs-close {
+        font-size: 22px;
+    }
+    .logo img {
+        content: url("../image/logoDesktop.svg");
+    }
+    .modalTerms {
+        width: 600px;
+        height: auto;
+        padding: 52px 63px 74px 70px;
+    }
+    .modalTitle {
+        font-size: 20px;
+    }
+    .modalClose {
+        top: 32px;
+        right: 54px;
+    }
+    .modalClose img {
+        width: inherit;
+        height: inherit;
+    }
 }
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    .modalTerms {
+        width: 768px;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     .client-info {
@@ -635,5 +847,12 @@ span {
     }
     .cvvCredit {
         width: 193px;
+    }
+    .modalTitle {
+        font-size: 22px;
+    }
+    .btnAccept button {
+        font-size: 20px;
+        margin-top: 48px;
     }
 }
